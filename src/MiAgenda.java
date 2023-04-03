@@ -25,6 +25,10 @@ public class MiAgenda implements Serializable{
         this.email = email;
     }
 
+    
+
+   
+
     public String getNombre() {
         return nombre;
     }
