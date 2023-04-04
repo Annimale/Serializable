@@ -15,7 +15,6 @@ public class MiObjectOutputStream extends ObjectOutputStream  {
     protected void writeStreamHeader() throws IOException{
         // No hacer nada.
     }
- 
     //Constructores
     public MiObjectOutputStream () throws IOException{
         super();

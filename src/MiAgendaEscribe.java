@@ -19,17 +19,26 @@ public class MiAgendaEscribe {
 
     public static void main(String[] args) throws IOException {
 
-        String cadena = "";
         File f = new File("archivo.dat");
-        f.createNewFile();
         String otro;
         String nombre, email, direccion;
 
         Scanner tcl = new Scanner(System.in);
-        FileOutputStream ficha = new FileOutputStream(f);
-        BufferedOutputStream b = new BufferedOutputStream(ficha);
-        ObjectOutputStream d = new ObjectOutputStream(b);
+        FileOutputStream ficha;
+        ObjectOutputStream d;
         try {
+
+            if (f.exists()) {
+                ficha = new FileOutputStream(f);
+
+                d = new MiObjectOutputStream(ficha);
+
+            } else {
+                ficha = new FileOutputStream(f);
+
+                d = new ObjectOutputStream(ficha);
+            }
+
             do {
                 ArrayList lista = new ArrayList();
                 System.out.println("Introduzca su nombre: ");
