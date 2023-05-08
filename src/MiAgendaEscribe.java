@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 /**
  *
- * @author ivamar
+ * @author ivamarrrr
  */
 public class MiAgendaEscribe {
 
